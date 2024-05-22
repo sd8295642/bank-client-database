@@ -1,13 +1,13 @@
-const Client = require('./Client.js');
-const Account = require('./Account.js');
+const Client = require('./models/Client.js');
+const Account = require('./models/Account.js');
 
 Client.hasMany(Account, {
-    foreignKey: 'client_id',
+    foreignKey: 'client_number',
     onDelete: 'CASCADE'
 });
 
 Account.belongsTo(Client, {
-    foreignKey: 'client_id'
+    foreignKey: 'client_number'
 });
 
 module.exports = { Client, Account };
