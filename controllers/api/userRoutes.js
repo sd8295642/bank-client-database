@@ -4,6 +4,7 @@ const { User } = require("../../models");
 const speakeasy = require("speakeasy");
 const bcrypt = require("bcrypt");
 
+// "/users" route
 // Route to register a new user... change to "/register"?
 router.post("/", async (req, res) => {
   try {
