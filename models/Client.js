@@ -13,18 +13,15 @@ Client.init(
         },
         first_name: {
             type: DataTypes.STRING,
-            allowNull: true
+            allowNull: false
         },
         last_name: {
             type: DataTypes.STRING,
-            allowNull: true
+            allowNull: false
         },
-        entity_name: {
-            type: DataTypes.STRING,
-            allowNull: true
-        },
+    
         tax_id: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
             unique: true
         },

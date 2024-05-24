@@ -29,12 +29,8 @@ Account.init (
         has_beneficiary: {
             type: DataTypes.BOOLEAN,
             allowNull: true
-        },
-        // only for LLCs and Corporations, anyone who owns more than 25% of the entity
-        beneficial_owners: {
-            type: DataTypes.STRING,
-            allowNull: true
         }
+        
     },
     {
         sequelize,
