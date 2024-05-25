@@ -1,5 +1,7 @@
 const router = require("express").Router();
 const { Client, Account } = require("../../models");
+const withAuth = require("../../utils/auth");
+
 router.get("/:client_number", withAuth, async (req, res) => {
   try {
     const clientData = await Client.findByPk(req.params.client_number, {
