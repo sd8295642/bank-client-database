@@ -18,12 +18,13 @@ router.post("/register", async (req, res) => {
     // Generate a unique secret key for the user
     const secret = speakeasy.generateSecret({ length: 20 });
 
-    const hashedPassword = await bcrypt.hash(password, 10);
+    // const hashedPassword = await bcrypt.hash(password, 10);
+    // console.log("Hashed Password:", hashedPassword);
 
     // Save the user's data, including the secret key, in the database
     const userData = await User.create({
       email,
-      password: hashedPassword,
+      password,
       secret: secret.base32,
     });
 
@@ -57,15 +58,20 @@ router.post("/login", async (req, res) => {
     const userData = await User.findOne({ where: { email } });
 
     if (!userData) {
+      console.log("User not found for email:", email);
       res
         .status(400)
         .json({ message: "Incorrect email or password, please try again" });
       return;
     }
 
+    console.log("Stored Hashed Password:", userData.password);
+
     const validPassword = await bcrypt.compare(password, userData.password);
+    console.log("Valid Password:", validPassword);
 
     if (!validPassword) {
+      console.log("Invalid password for email:", email);
       res
         .status(400)
         .json({ message: "Incorrect email or password, please try again" });
@@ -73,7 +79,11 @@ router.post("/login", async (req, res) => {
     }
 
     // Verify the OTP if the user has a secret key (2FA enabled)
+    console.log("Stored Secret:", userData.secret); // Debugging
+    console.log("Token provided:", token); // Debugging
+
     if (userData.secret) {
+      console.log("Verifying 2FA token for email:", email);
       const verified = speakeasy.totp.verify({
         secret: userData.secret,
         encoding: "base32",
@@ -81,6 +91,7 @@ router.post("/login", async (req, res) => {
       });
 
       if (!verified) {
+        console.log("Invalid 2FA token for email:", email);
         return res.status(401).send("Invalid token");
       }
     }
@@ -89,6 +100,7 @@ router.post("/login", async (req, res) => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
 
+      console.log("User logged in:", email);
       res.json({ user: userData, message: "You are now logged in!" });
     });
   } catch (err) {
