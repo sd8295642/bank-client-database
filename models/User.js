@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require("sequelize");
-const sequelize = require("../config/connection"); // Adjust the path as needed
+const sequelize = require("../config/connection");
 const bcrypt = require("bcrypt");
 
 class User extends Model {}
@@ -41,7 +41,10 @@ User.init(
       },
       beforeUpdate: async (updatedUserData) => {
         if (updatedUserData.changed("password")) {
-            updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+          updatedUserData.password = await bcrypt.hash(
+            updatedUserData.password,
+            10
+          );
         }
         return updatedUserData;
       },

@@ -8,6 +8,12 @@ const accountData = require("./accountData.json");
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
+  console.log("seeding users...");
+  const users = await User.bulkCreate(userData, {
+    individualHooks: true,
+    returning: true,
+  });
+
   const clients = await Client.bulkCreate(clientData, {
     individualHooks: true,
     returning: true,

@@ -3,12 +3,17 @@ const router = require("express").Router();
 const { User } = require("../../models");
 const speakeasy = require("speakeasy");
 const bcrypt = require("bcrypt");
+const qrcode = require("qrcode");
 
-// "/users" route
-// Route to register a new user... change to "/register"?
-router.post("/", async (req, res) => {
+router.post("/register", async (req, res) => {
   try {
     const { email, password } = req.body;
+
+    // Check if the email already exists
+    const existingUser = await User.findOne({ where: { email } });
+    if (existingUser) {
+      return res.status(400).json({ message: "Email already exists" });
+    }
 
     // Generate a unique secret key for the user
     const secret = speakeasy.generateSecret({ length: 20 });
@@ -27,17 +32,17 @@ router.post("/", async (req, res) => {
       if (err) {
         return res.status(500).send("Error generating QR code");
       }
-    });
 
-    req.session.save(() => {
-      req.session.user_id = userData.id;
-      req.session.logged_in = true;
+      req.session.save(() => {
+        req.session.user_id = userData.id;
+        req.session.logged_in = true;
 
-      // Send the QR code to the user
-      res.send(
-        `<img src="${data_url}"><p>Scan the QR code with your authenticator app</p>`
-      );
-      res.status(200).json(userData);
+        // Send the QR code to the user
+        res.send(
+          `<img src="${data_url}"><p>Scan the QR code with your authenticator app</p>`
+        );
+        // res.status(200).json(userData);
+      });
     });
   } catch (err) {
     res.status(400).json(err);
@@ -88,6 +93,16 @@ router.post("/login", async (req, res) => {
     });
   } catch (err) {
     res.status(400).json(err);
+  }
+});
+
+// get all users
+router.get("/", async (req, res) => {
+  try {
+    const userData = await User.findAll();
+    res.status(200).json(userData);
+  } catch (err) {
+    res.status(500).json(err);
   }
 });
 
