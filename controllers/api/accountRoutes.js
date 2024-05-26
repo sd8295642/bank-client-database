@@ -1,5 +1,7 @@
 const router = require("express").Router();
 const { Client, Account } = require("../../models");
+const withAuth = require("../../utils/auth")
+
 router.get("/:account_number", withAuth, async (req, res) => {
   
   try {
@@ -10,7 +12,7 @@ router.get("/:account_number", withAuth, async (req, res) => {
       res.status(404).json({ message: "No accounts found!" });
       return;
     }
-    res.status(200).json(accountData);
+    res.render('homepage', accountData)
   } catch (err) {
     res.status(500).json(err);
   }

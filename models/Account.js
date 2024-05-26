@@ -6,12 +6,12 @@ class Account extends Model {}
 Account.init (
     {   
         client_number: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
             references: { model: 'client', key: 'client_number' } 
         },
         account_number: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
             unique: true,
           },
@@ -29,6 +29,10 @@ Account.init (
         has_beneficiary: {
             type: DataTypes.BOOLEAN,
             allowNull: true
+        },
+        account_balance: {
+            type: DataTypes.STRING,
+            allowNull: false
         }
         
     },

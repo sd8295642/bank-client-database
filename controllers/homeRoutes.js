@@ -8,7 +8,7 @@ router.get ('/', async (req,res)=>{
         //if we need info from the database request it here
 
         //render the view we want to see
-        res.render ('homepage',{
+        res.render ('clientProfile',{
             //pass data for the handlebars view here
         }) 
     } catch (error) {

@@ -6,7 +6,7 @@ class Client extends Model {}
 Client.init(
     {
         client_number: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
             unique: true,
             primaryKey: true
@@ -26,7 +26,7 @@ Client.init(
             unique: true
         },
         phone: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false
         },
         email: {

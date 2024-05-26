@@ -1,0 +1,23 @@
+{{!-- client thing --}}
+<div>
+  <p>Client Number: {{client.client_number}}</p>
+  <p>Name: {{client.first_name}} {{client.last_name}}</p>
+  <p>Tax ID: {{client.tax_id}}</p>
+  <p>Phone Number: {{client.phone}}</p>
+  <p>Email: {{client.email}}</p>
+  <p>Address: {{client.address}}</p>
+</div>
+
+<!-- Loop over each object in the array -->
+{{#each accountData as |account| }}
+<div class="row mb-4 project">
+  <div class="col-md-5">
+    <h2>
+      <p>Account Number: {{account.account_number}}</p>
+      <p>Account Type: {{account.type}}</p>
+      <p>Ownership Type: {{account.ownership_type}}</p>
+      <p>Beneficiary: {{account.has_beneficiary}}</p>
+      <p>Account Balance: {{account.account_balance}}</p>
+    </h2>
+  </div>
+{{/each}}
