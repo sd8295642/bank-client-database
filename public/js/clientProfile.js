@@ -12,9 +12,13 @@ const searchFormHandler = async (event) => {
     });
 
     if (response.ok) {
-        document.location.replace("/");
+        document.location.replace("/clientProfile");
       } else {
         alert(response.statusText);
       }
 };
 };
+
+document
+  .querySelector(".search-form")
+  .addEventListener("submit-search", searchFormHandler);

@@ -1,14 +1,15 @@
 
 
 const router = require ('express').Router ();
+const withAuth = require('../utils/auth');
 
-//homepage route
-router.get ('/', async (req,res)=>{
+//main route
+router.get ('/', withAuth, async (req,res)=>{
     try {
         //if we need info from the database request it here
 
         //render the view we want to see
-        res.render ('clientProfile',{
+        res.render ('workspace',{
             //pass data for the handlebars view here
         }) 
     } catch (error) {
@@ -29,12 +30,12 @@ router.get ('/login', async (req,res)=>{
     }
 })
 //workspace route
-router.get ('/workspace', async (req,res)=>{
+router.get ('/clientProfile', withAuth, async (req,res)=>{
     try {
         //if we need info from the database request it here
 
         //render the view we want to see
-        res.render ('workspace',{
+        res.render ('clientProfile',{
             //pass data for the handlebars view here
         }) 
     } catch (error) {

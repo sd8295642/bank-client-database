@@ -6,13 +6,13 @@ router.get("/:account_number", withAuth, async (req, res) => {
   
   try {
     const accountData = await Account.findByPk(req.params.account_number, {
-      //include: [{ model: Product, through: ProductTag }]
+      //include: [{ model: Account, through: Client }]
     });
     if (!accountData) {
       res.status(404).json({ message: "No accounts found!" });
       return;
     }
-    res.render('homepage', accountData)
+    res.status(200).json(accountData);
   } catch (err) {
     res.status(500).json(err);
   }
@@ -37,4 +37,5 @@ router.put("/:account_number", withAuth, async (req, res) => {
     res.status(400).json(err);
   }
 });
+
 module.exports = router;
