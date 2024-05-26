@@ -18,8 +18,10 @@
     "express-session": "^1.18.0",
     "pg": "^8.11.5",
     "prettier": "^3.2.5",
+    "qrcode": "^1.5.3",
     "save-dev": "^0.0.1-security",
-    "sequelize": "^6.37.3"
+    "sequelize": "^6.37.3",
+    "speakeasy": "^2.0.0"
   },
   "devDependencies": {
     "eslint-config-prettier": "^9.1.0",
