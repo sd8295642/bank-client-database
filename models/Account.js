@@ -6,12 +6,12 @@ class Account extends Model {}
 Account.init (
     {   
         client_number: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
             references: { model: 'client', key: 'client_number' } 
         },
         account_number: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
             unique: true,
           },
@@ -20,15 +20,18 @@ Account.init (
             type: DataTypes.STRING,
             allowNull: false
         },
-        // single party, joint, or multiple party for personal accounts, not needed for business accounts
+        // single party, joint, or multiple party for personal accounts
         ownership_type: {
             type: DataTypes.STRING,
             allowNull: true
         },
-        // only for personal and single owner business accounts (Doing Business As/DBA)
         has_beneficiary: {
             type: DataTypes.BOOLEAN,
             allowNull: true
+        },
+        account_balance: {
+            type: DataTypes.STRING,
+            allowNull: false
         }
         
     },

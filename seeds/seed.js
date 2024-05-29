@@ -8,12 +8,10 @@ const accountData = require("./accountData.json");
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
-  console.log("seeding users...");
   const users = await User.bulkCreate(userData, {
     individualHooks: true,
     returning: true,
   });
-
   const clients = await Client.bulkCreate(clientData, {
     individualHooks: true,
     returning: true,
@@ -36,14 +34,6 @@ const seedDatabase = async () => {
       client_number: clientMap[account.client_number],
     });
   }
-
-  // for (const account of accountData) {
-  //   await Account.create({
-  //     ...account,
-  //     client_number:
-  //       clients[Math.floor(Math.random() * clients.length)].account_number,
-  //   });
-  // }
 
   process.exit(0);
 };
