@@ -1,18 +1,17 @@
 const searchFormHandler = async (event) => {
     event.preventDefault();
 
-    const clientNumber = document.querySelector('client-number').value.trim();
-    const accountNumber = document.querySelector('account-number').value.trim();
+    const clientNumber = document.getElementById('client-number').value.trim();
+    // const accountNumber = document.getElementById('account-number').value.trim();
 
-    if (clientNumber || accountNumber) {
-        const response = await fetch("/api/clientRoutes", {
-            method: "POST",
-            body: JSON.stringify({ clientNumber, accountNumber }),
+    if (clientNumber) {
+        const response = await fetch(`/api/clients/${clientNumber}`, {
+            method: "GET",
             headers: { "Content-Type": "application/json" },
-    });
+    })
 
     if (response.ok) {
-        document.location.replace("/clientProfile");
+        document.location.replace(`/clientProfile/${clientNumber}`);
       } else {
         alert(response.statusText);
       }
@@ -21,4 +20,4 @@ const searchFormHandler = async (event) => {
 
 document
   .querySelector(".search-form")
-  .addEventListener("submit-search", searchFormHandler);
+  .addEventListener("submit", searchFormHandler);

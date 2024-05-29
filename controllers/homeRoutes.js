@@ -1,16 +1,12 @@
-
-
 const router = require ('express').Router ();
 const withAuth = require('../utils/auth');
+const { Client } = require('../models')
 
 //main route
 router.get ('/', withAuth, async (req,res)=>{
     try {
-        //if we need info from the database request it here
-
-        //render the view we want to see
         res.render ('workspace',{
-            //pass data for the handlebars view here
+        logged_in: req.session.logged_in
         }) 
     } catch (error) {
     res.status (500).json(error)    
@@ -18,26 +14,26 @@ router.get ('/', withAuth, async (req,res)=>{
 })
 //login route
 router.get ('/login', async (req,res)=>{
+   // if (req.session.logged_in) go to homepage
+   // else
     try {
-        //if we need info from the database request it here
-
-        //render the view we want to see
-        res.render ('login',{
-            //pass data for the handlebars view here
-        }) 
+        res.render ('login') 
     } catch (error) {
     res.status (500).json(error)    
     }
 })
-//workspace route
-router.get ('/clientProfile', withAuth, async (req,res)=>{
+//client route
+router.get ('/clientProfile/:client_number', withAuth, async (req,res)=>{
     try {
-        //if we need info from the database request it here
-
-        //render the view we want to see
-        res.render ('clientProfile',{
-            //pass data for the handlebars view here
-        }) 
+        const clientData = await Client.findOne({
+            where: { client_number: req.params.client_number }
+          });
+          if (!clientData) {
+            res.status(404).json({ message: "No clients found!" });
+            return;
+          }
+          const client = clientData.get({plain:true})
+          res.render ('clientProfile',{ client, logged_in: req.session.logged_in }) 
     } catch (error) {
     res.status (500).json(error)    
     }

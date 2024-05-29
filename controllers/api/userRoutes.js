@@ -48,7 +48,8 @@ router.post("/", async (req, res) => {
 router.post("/login", async (req, res) => {
   
   try {
-    const { email, password, token } = req.body;
+  
+    const { email, password, secret } = req.body;
   
     const userData = await User.findOne({ where: { email } });
     
@@ -67,25 +68,26 @@ router.post("/login", async (req, res) => {
         .json({ message: "Incorrect email or password, please try again" });
       return;
     }
-
+ 
+    // THIS IS WHERE THE AUTHENTICATION/LOGIN ISSUE IS
     // Verify the OTP if the user has a secret key (2FA enabled)
-    if (userData.secret) {
-      const verified = speakeasy.totp.verify({
-        secret: userData.secret,
-        encoding: "base32",
-        token,
-      });
+    // if (userData.secret) {
+    //   const verified = speakeasy.totp.verify({
+    //     secret: userData.secret,
+    //     encoding: "base32",
+    //     token,
+    //   });
 
-      if (!verified) {
-        return res.status(401).send("Invalid token");
-      }
-    }
+    //   if (!verified) {
+    //     return res.status(401).send("Invalid token");
+    //   }
+    // }
 
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
 
-      res.json({ user: userData, message: "You are now logged in!" });
+      res.json({ user: userData, message: "You are now logged in!", logged_in: req.session.logged_in });
     });
   } catch (err) {
     res.status(400).json(err);

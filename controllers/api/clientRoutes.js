@@ -4,8 +4,8 @@ const withAuth = require("../../utils/auth");
 
 router.get("/:client_number", withAuth, async (req, res) => {
   try {
-    const clientData = await Client.findByPk(req.params.client_number, {
-      //include: [{ model: Product, through: ProductTag }]
+    const clientData = await Client.findOne({
+      where: { client_number: req.params.client_number }
     });
     if (!clientData) {
       res.status(404).json({ message: "No clients found!" });
