@@ -22,6 +22,16 @@ router.get ('/login', async (req,res)=>{
     res.status (500).json(error)    
     }
 })
+
+//signup route
+router.get('/signup', async (req, res)=>{
+    try {
+        res.render('signup')
+    } catch (error) {
+        res.status(500).json(error)
+    }
+})
+
 //client route
 router.get ('/clientProfile/:client_number', withAuth, async (req,res)=>{
     try {
