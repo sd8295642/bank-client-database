@@ -1,0 +1,52 @@
+[
+    {
+        "client_number": "894523",
+        "first_name": "Jason",
+        "last_name":  "Vorhees",
+        "tax_id": "123-45-6789",
+        "phone": "808.555.3333",
+        "email": "scaryDude@mail.com",
+        "address": "15 Crystal Lake, Cunningham, NJ, 19999"
+    },
+
+    {
+        "client_number": "745851",
+        "first_name": "Freddy",
+        "last_name": "Krueger",
+        "tax_id": "113-75-3789",
+        "phone": "808.666.3333",
+        "email": "scaryDude02@mail.com",
+        "address": "90 Elm Street, Springwood, OH, 18888"
+    },
+    
+    {
+        "client_number": "457891",
+        "first_name": "Michael",
+        "last_name":  "Myers",
+        "tax_id": "123-75-6289",
+        "phone": "808.555.7788",
+        "email": "scaryDude03@mail.com",
+        "address": "1000 Mission Street, Haddenfield, IL, 14444"
+    },
+
+    {
+        "client_number": "951357",
+        "first_name": "Norman",
+        "last_name":  "Bates",
+        "tax_id": "321-85-4789",
+        "phone": "808.999.7788",
+        "email": "scaryDude04@mail.com",
+        "address": "4019 Highway 88, White Pine Bay, OR, 67153"
+    },
+
+    {
+        "client_number": "111111",
+        "first_name": "Hannibal",
+        "last_name":  "Lecter",
+        "tax_id": "936-46-7518",
+        "phone": "808.825.6457",
+        "email": "scaryDude05@mail.com",
+        "address": "2350 Doulton Drive, Mississauga, Ontario, 17834"
+    }
+
+]

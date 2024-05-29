@@ -1,0 +1,73 @@
+[
+    {
+       "client_number": "894523",
+       "account_number": "5151452",
+       "account_type": "Personal Checking",
+       "ownership_type": "Joint",
+       "has_beneficiary": false,
+       "account_balance": "$ -100.00"
+    },
+
+    {
+        "client_number": "745851",
+        "account_number": "3452871",
+        "account_type": "Personal Checking",
+        "ownership_type": "Joint",
+        "has_beneficiary": false,
+        "account_balance": "$ -100.00"   
+    },
+
+    {
+        "client_number": "745851",
+        "account_number": "3452888",
+        "account_type": "Savings",
+        "ownership_type": "Joint",
+        "has_beneficiary": true,
+        "account_balance": "$ -100.00"
+    },
+
+    {
+        "client_number": "457891",
+        "account_number": "7856213",
+        "account_type": "Personal Checking",
+        "ownership_type": "Single Party",
+        "has_beneficiary": true,
+        "account_balance": "$ -100.00"
+    },
+
+    {
+        "client_number": "951357",
+        "account_number": "316497",
+        "account_type": "Personal Checking",
+        "ownership_type": "Single Party",
+        "has_beneficiary": false,
+        "account_balance": "$ -100.00"
+    },
+
+    {
+        "client_number": "951357",
+        "account_number": "316433",
+        "account_type": "Savings",
+        "ownership_type": "Single Party",
+        "has_beneficiary": false,
+        "account_balance": "$ -100.00" 
+    },
+
+    {
+        "client_number": "111111",
+        "account_number": "8513496",
+        "account_type": "Personal Checking",
+        "ownership_type": "Joint",
+        "has_beneficiary": true,
+        "account_balance": "$ -100.00"
+    },
+
+    {
+        "client_number": "111111",
+        "account_number": "8513477",
+        "account_type": "Savings",
+        "ownership_type": "Joint",
+        "has_beneficiary": true,
+        "account_balance": "$ 10,000.00"  
+    }
+]
