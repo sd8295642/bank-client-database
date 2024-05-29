@@ -5,8 +5,8 @@ const withAuth = require("../../utils/auth")
 router.get("/:account_number", withAuth, async (req, res) => {
   
   try {
-    const accountData = await Account.findByPk(req.params.account_number, {
-      //include: [{ model: Account, through: Client }]
+    const accountData = await Account.findOne(req.params.account_number, {
+      where: { account_number: req.params.account_number }
     });
     if (!accountData) {
       res.status(404).json({ message: "No accounts found!" });
