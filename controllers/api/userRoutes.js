@@ -39,10 +39,15 @@ router.post("/register", async (req, res) => {
         req.session.logged_in = true;
 
         // Send the QR code to the user
-        res.send(
-          `<img src="${data_url}"><p>Scan the QR code with your authenticator app</p>`
-        );
-        // res.status(200).json(userData);
+        // res.send(
+        //   `<img src="${data_url}"><p>Scan the QR code with your authenticator app</p>`
+        // );
+        res.status(200).json({
+          user: userData,
+          qrCode: data_url,
+          message:
+            "Registration successful. Scan the QR code with your authenticator app.",
+        });
       });
     });
   } catch (err) {
