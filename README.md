@@ -1,13 +1,11 @@
-# <Your-Project-Title>
+# <Amityville Bank Client Database>
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
 
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+Amityville Bank Client Database was designed to create an efficient, secure, and user-friendly system for managing client information in a banking environment. The primary motivation behind this project was to address the challenges faced by banks in handling large volumes of client data while ensuring data integrity. By developing this database, we aimed to streamline the process of storing, retrieving, and updating client information.
+This project was built upon the basis of creating a client database that is easily traversable and clear to read.
+Throughout the development of the Amityville Bank Client Database, we gained valuable insights into database design and management, as well as how to properly secure user data.
 
 ## Table of Contents (Optional)
 
