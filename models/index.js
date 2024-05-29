@@ -11,4 +11,4 @@ Account.belongsTo(Client, {
   foreignKey: "client_number",
 });
 
-module.exports = { Client, Account, User, User };
+module.exports = { Client, Account, User };

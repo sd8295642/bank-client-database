@@ -18,8 +18,8 @@ router.post("/register", async (req, res) => {
     // Generate a unique secret key for the user
     const secret = speakeasy.generateSecret({ length: 20 });
 
-    // const hashedPassword = await bcrypt.hash(password, 10);
-    // console.log("Hashed Password:", hashedPassword);
+    const hashedPassword = await bcrypt.hash(password, 10);
+    console.log("Hashed Password:", hashedPassword);
 
     // Save the user's data, including the secret key, in the database
     const userData = await User.create({
