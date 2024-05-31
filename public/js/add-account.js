@@ -14,7 +14,7 @@ document.querySelector("#addaccount").addEventListener("submit", async function(
   if (response.ok) {
     const data = await response.json();
     console.log(data);
-    // document.location.reload();
+    
   } else {
     const errorText = await response.text();
     alert('Request failed with status ' + response.status + ': ' + errorText);

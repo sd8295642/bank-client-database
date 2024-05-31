@@ -2,7 +2,6 @@ const searchFormHandler = async (event) => {
     event.preventDefault();
 
     const clientNumber = document.getElementById('client-number').value.trim();
-    // const accountNumber = document.getElementById('account-number').value.trim();
 
     if (clientNumber) {
         const response = await fetch(`/api/clients/${clientNumber}`, {

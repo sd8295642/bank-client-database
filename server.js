@@ -11,7 +11,6 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 const hbs = exphbs.create({});
 
-//cookie session
 const sess = {
   secret: "Super secret secret",
   cookie: {
@@ -29,11 +28,9 @@ const sess = {
 
 app.use(session(sess));
 
-//tell server to use handlebars as view engine
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 
-//middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
