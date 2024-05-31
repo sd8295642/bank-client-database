@@ -6,7 +6,9 @@ const loginFormHandler = async (event) => {
   const token = document.querySelector("#token-login").value.trim();
 
   if (email && password && token) {
-    console.log(email, password, token)
+
+    console.log(email, password, token);
+
     const response = await fetch("/api/users/login", {
       method: "POST",
       body: JSON.stringify({ email, password, token }),
@@ -16,12 +18,14 @@ const loginFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace("/");
     } else {
-      alert(response.statusText);
+      const errorData = await response.json();
+      alert(errorData.message || response.statusText);
     }
+  } else {
+    alert("Enter a valid email, password and token!");
   }
 };
 
 document
   .querySelector(".login-form")
   .addEventListener("submit", loginFormHandler);
-
