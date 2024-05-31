@@ -8,18 +8,18 @@
   <p>Address: {{client.address}}</p>
 </div>
 {{!-- add an account --}}
-<form id="addaccount">
+<form>
   <label>Client number;</label>
-  <input type="text" value="{{client.client_number}}" id="client_number">
+  <input type="text" value="{{client.client_number}}" id="client_number"/>
   <label>Account Number:</label>
-<input type="text" id="account_number"> 
+<input type="text" id="account_number"/> 
 <label>Account Type</label>
-<input type="text" id="account_type">
+<input type="text" id="account_type"/>
 <label>Ownership Type</label>
-<input type="text" id="ownership_type">
+<input type="text" id="ownership_type"/>
 <label>Account Balance</label>
-<input type="text" id="account_balance"> 
-<button type="submit">Submit</button>
+<input type="text" id="account_balance"/> 
+<button type="submit" id="addaccount">Submit</button>
 </form>
 <!-- Loop over each object in the array -->
 {{#each accountData as |account| }}
@@ -34,3 +34,4 @@
     </h2>
   </div>
 {{/each}}
+<script src="/js/add-account.js"></script>
