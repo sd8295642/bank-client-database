@@ -1,18 +1,28 @@
 <div class="login-form-container">
-  <form class="login-form">
-    <label>Employee Email: </label>
-    <input type="text" id="email-login" />
 
-    <label>Employee Password: </label>
-    <input type="text" id="password-login" />
-
+  <form class='login-form'>
+    <h2>Employee Login</h2>
+    <div class="form-input">
+    <label>Email: </label>
+    <input type="text" id="email-login">
+    </div>
+    <div class="form-input">
+    <label>Password: </label>
+    <input type="password" id="password-login" />
+    </div>
+    
+    <div class="form-input">
     <label>Token: </label>
     <input type="text" id="token-login" />
+    </div>
 
+    <div class= "submit-login">
     <button class="enter-button" type="submit">Enter</button>
+    </div>
+    
+    <div class="signup-button-container"> 
+       <a class="signup-link "href="/signup">~ Sign Up Instead ~</a> 
 
-    <div class="signup-button-container">
-      <a class="signup-link" href="/signup">~ Sign Up Instead ~</a>
     </div>
 
   </form>
