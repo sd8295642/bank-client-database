@@ -1,4 +1,3 @@
-{{!-- client thing --}}
 <div>
   <p>Client Number: {{client.client_number}}</p>
   <p>Name: {{client.first_name}} {{client.last_name}}</p>
@@ -7,7 +6,7 @@
   <p>Email: {{client.email}}</p>
   <p>Address: {{client.address}}</p>
 </div>
-{{!-- add an account --}}
+
 <form>
   <label>Client number;</label>
   <input type="text" value="{{client.client_number}}" id="client_number"/>
@@ -21,7 +20,7 @@
 <input type="text" id="account_balance"/> 
 <button type="submit" id="addaccount">Submit</button>
 </form>
-<!-- Loop over each object in the array -->
+
 {{#each accountData as |account| }}
 <div class="row mb-4 project">
   <div class="col-md-5">
