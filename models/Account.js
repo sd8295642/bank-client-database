@@ -15,12 +15,10 @@ Account.init (
             allowNull: false,
             unique: true,
           },
-        // checking, savings, CD, IRA, loan
         account_type: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        // single party, joint, or multiple party for personal accounts
         ownership_type: {
             type: DataTypes.STRING,
             allowNull: true
