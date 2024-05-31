@@ -1,6 +1,6 @@
 const Client = require("./Client");
 const Account = require("./Account");
-const User = require("./User")
+const User = require("./User");
 
 Client.hasMany(Account, {
   foreignKey: "client_number",
