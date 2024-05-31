@@ -17,7 +17,6 @@ const signupFormHandler = async (event) => {
       document.querySelector("#qr-code-message").textContent = data.message;
       document.querySelector("#qr-code-container").style.display = "block";
 
-      // document.location.replace("/workspace");
     } else {
       alert(response.statusText);
     }
