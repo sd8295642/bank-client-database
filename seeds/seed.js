@@ -12,7 +12,6 @@ const seedDatabase = async () => {
     individualHooks: true,
     returning: true,
   });
-  
   const clients = await Client.bulkCreate(clientData, {
     individualHooks: true,
     returning: true,
@@ -35,7 +34,7 @@ const seedDatabase = async () => {
       client_number: clientMap[account.client_number],
     });
   }
-  
+
   process.exit(0);
 };
 

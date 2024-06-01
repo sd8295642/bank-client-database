@@ -2,19 +2,152 @@ header {
   border-bottom: 2px solid black;
 }
 
+.enter-button {
+  border-radius: 6px;
+  border: none;
+  font-family:"MedievalSharp", cursive;
+}
+
+.enter-button:hover {
+  background-color: black;
+  color:rgb(178, 8, 8);
+}
+
+.search-button {
+  border-radius: 6px;
+  border: none;
+  font-family:"MedievalSharp", cursive;
+}
+
+.search-button:hover {
+  background-color: black;
+  color:rgb(178, 8, 8);
+}
+
 .no-button {
   background: none;
   border: none;
   padding: 0;
   cursor: pointer;
-  color: #1b89bc;
+  color: rgb(198, 192, 192);
   text-decoration: none;
-  font-size: 100%;
+  font-size: 1.3rem;
+  font-family: "MedievalSharp", cursive;
 }
 
 .no-button:hover {
-  color: #065b83;
+  color: black;
   text-decoration: underline;
 }
 
+#submit-signup {
+  border-radius: 6px;
+  border: none;
+  font-family:"MedievalSharp", cursive;
+}
 
+#submit-signup:hover {
+  background-color: black;
+  color:rgb(178, 8, 8);
+}
+
+.theme {
+  background-color: rgb(34, 32, 32);
+  color: rgb(224, 218, 218);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "MedievalSharp", cursive;
+}
+
+.header {
+  background-color: rgb(121, 17, 17);
+  text-align: center;
+  padding: 2rem;
+  width: 100%;
+}
+
+.header h1 a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.header-title{
+  font-size: 1.5em;
+}
+
+.main {
+  max-width: 40rem;
+  min-width: 10rem;
+  padding: 3rem;
+  background-color: rgb(139, 12, 12);
+  border-radius: 8px;
+  box-shadow: 4px 4px 8px rgba(255,255,255,0.3);
+  display: flex;
+  justify-content: center;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+.login-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.login-form {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.login-link {
+  font-size: 1.3rem;
+}
+
+.login-link:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+.signup-button-container a {
+  text-decoration: none;
+  color:inherit;
+}
+
+.signup-link:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+#email-login {
+  border-radius: 6px;
+  border: none;
+  box-shadow:inset 2px 2px 4px rgba(0,0,0,0.5);
+
+}
+
+#password-login {
+  border-radius: 6px;
+  border:none;
+  box-shadow:inset 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.nav a{
+  text-decoration: none;
+  color:inherit;
+}
