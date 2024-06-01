@@ -16,9 +16,11 @@ const signupFormHandler = async (event) => {
       document.querySelector("#qr-code").src = data.qrCode;
       document.querySelector("#qr-code-message").textContent = data.message;
       document.querySelector("#qr-code-container").style.display = "block";
+      document.querySelector("#submit-signup").style.display = "none";
 
     } else {
-      alert(response.statusText);
+      const errorData = await response.json();
+      alert(errorData.message || response.statusText);
     }
   }
 };

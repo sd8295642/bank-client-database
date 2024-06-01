@@ -3,9 +3,11 @@ header {
 }
 
 .enter-button {
-  border-radius: 6px;
+
+  border-radius: 9px;
   border: none;
   font-family:"MedievalSharp", cursive;
+  font-size: medium;
 }
 
 .enter-button:hover {
@@ -109,10 +111,28 @@ header {
   gap: 1rem;
 }
 
-.login-form {
+.form-input {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.login-form {
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content:space-around; */
   gap: 0.5rem;
+}
+
+label {
+  padding: 0 8px;
+}
+
+.submit-login {
+  display:flex;
+  justify-content: end;
+  padding: 1rem;
 }
 
 .login-link {
@@ -124,9 +144,16 @@ header {
   text-decoration: underline;
 }
 
+.signup-button-container{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
 .signup-button-container a {
   text-decoration: none;
   color:inherit;
+  font-size: larger;
 }
 
 .signup-link:hover {
@@ -134,7 +161,7 @@ header {
   text-decoration: underline;
 }
 
-#email-login {
+#email-login, #token-login {
   border-radius: 6px;
   border: none;
   box-shadow:inset 2px 2px 4px rgba(0,0,0,0.5);
