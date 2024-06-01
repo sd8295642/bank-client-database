@@ -1,4 +1,4 @@
-<div>
+<div class="client-info">
   <p>Client Number: {{client.client_number}}</p>
   <p>Name: {{client.first_name}} {{client.last_name}}</p>
   <p>Tax ID: {{client.tax_id}}</p>
@@ -8,15 +8,14 @@
 </div>
 
 {{#each client.accounts as |account| }}
-<div class="row mb-4 project">
-  <div class="col-md-5">
-    <h2>
+<div class="account-info">
+  
       <p>Account Number: {{account.account_number}}</p>
       <p>Account Type: {{account.account_type}}</p>
       <p>Ownership Type: {{account.ownership_type}}</p>
       {{!-- <p>Beneficiary: {{account.has_beneficiary}}</p> --}}
       <p>Account Balance: {{account.account_balance}}</p>
-    </h2>
+    
   </div>
 {{/each}}
 

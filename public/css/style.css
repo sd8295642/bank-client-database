@@ -53,6 +53,12 @@ header {
   color:rgb(178, 8, 8);
 }
 
+.new-client {
+  text-decoration: none;
+  color:inherit;
+  font-size: large;
+}
+
 .theme {
   background-color: rgb(34, 32, 32);
   color: rgb(224, 218, 218);
@@ -86,6 +92,7 @@ header {
   border-radius: 8px;
   box-shadow: 4px 4px 8px rgba(255,255,255,0.3);
   display: flex;
+  display: inline;
   justify-content: center;
 }
 
@@ -102,6 +109,15 @@ header {
   gap: 1rem;
   justify-content: flex-end;
   padding: 1rem;
+}
+
+.client-info, .account-info {
+  max-width: 40rem;
+  min-width: 10rem;
+  padding: 3rem;
+  background-color: rgb(66, 60, 60);
+  border-radius: 8px;
+  margin: 20px;
 }
 
 .login-form-container {
@@ -158,12 +174,26 @@ label {
   text-decoration: underline;
 }
 
+.add-account-btn {
+  text-decoration: none;
+  color:inherit;
+  font-size:larger;
+  color: black;
+}
+
+.add-account-btn:hover {
+  color:rgb(224, 218, 218);
+  text-decoration: underline;
+}
+
+
 #email-login, #token-login {
   border-radius: 6px;
   border: none;
   box-shadow:inset 2px 2px 4px rgba(0,0,0,0.5);
 
 }
+
 
 #password-login {
   border-radius: 6px;
