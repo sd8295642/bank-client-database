@@ -1,6 +1,16 @@
 [
     {
-        "client_number": "894523",
+        "client_number": "111111",
+        "first_name": "Hannibal",
+        "last_name":  "Lecter",
+        "tax_id": "936-46-7518",
+        "phone": "808.825.6457",
+        "email": "scaryDude05@mail.com",
+        "address": "2350 Doulton Drive, Mississauga, Ontario, 17834"
+    },
+
+    {
+        "client_number": "222222",
         "first_name": "Jason",
         "last_name":  "Vorhees",
         "tax_id": "123-45-6789",
@@ -10,7 +20,7 @@
     },
 
     {
-        "client_number": "745851",
+        "client_number": "333333",
         "first_name": "Freddy",
         "last_name": "Krueger",
         "tax_id": "113-75-3789",
@@ -20,7 +30,7 @@
     },
     
     {
-        "client_number": "457891",
+        "client_number": "444444",
         "first_name": "Michael",
         "last_name":  "Myers",
         "tax_id": "123-75-6289",
@@ -30,23 +40,13 @@
     },
 
     {
-        "client_number": "951357",
+        "client_number": "555555",
         "first_name": "Norman",
         "last_name":  "Bates",
         "tax_id": "321-85-4789",
         "phone": "808.999.7788",
         "email": "scaryDude04@mail.com",
         "address": "4019 Highway 88, White Pine Bay, OR, 67153"
-    },
-
-    {
-        "client_number": "111111",
-        "first_name": "Hannibal",
-        "last_name":  "Lecter",
-        "tax_id": "936-46-7518",
-        "phone": "808.825.6457",
-        "email": "scaryDude05@mail.com",
-        "address": "2350 Doulton Drive, Mississauga, Ontario, 17834"
     }
 
 ]
