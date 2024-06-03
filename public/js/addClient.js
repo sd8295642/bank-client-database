@@ -28,7 +28,7 @@ const createNewClient = async (event) => {
   }
 
   document
-    .getElementById("new-client")
+    .querySelector("#new-client")
     .addEventListener("submit", createNewClient); 
 
 
