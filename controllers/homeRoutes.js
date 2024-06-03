@@ -1,6 +1,6 @@
 const router = require ('express').Router ();
 const withAuth = require('../utils/auth');
-const { Client } = require('../models')
+const { Client, Account } = require('../models')
 
 
 router.get ('/', withAuth, async (req,res)=>{
@@ -29,10 +29,31 @@ router.get('/signup', async (req, res)=>{
     }
 })
 
+router.get('/addClient', withAuth, async (req, res)=>{
+    try {
+        res.render('newClientForm',{
+            logged_in: req.session.logged_in
+            })
+    } catch (error) {
+        res.status(500).json(error)
+    }
+})
+
+router.get('/addAccount', withAuth, async (req, res)=>{
+    try {
+        res.render('newAccountForm',{
+            logged_in: req.session.logged_in
+            })
+    } catch (error) {
+        res.status(500).json(error)
+    }
+})
+
 router.get ('/clientProfile/:client_number', withAuth, async (req,res)=>{
     try {
         const clientData = await Client.findOne({
-            where: { client_number: req.params.client_number }
+            where: { client_number: req.params.client_number },
+            include: [Account]
           });
           if (!clientData) {
             res.status(404).json({ message: "No clients found!" });

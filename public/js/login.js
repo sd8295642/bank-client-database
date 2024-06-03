@@ -7,7 +7,11 @@ const loginFormHandler = async (event) => {
 
   if (email && password && token) {
 
+    console.log(email, password, token)
+
+
     console.log(email, password, token);
+
 
     const response = await fetch("/api/users/login", {
       method: "POST",
