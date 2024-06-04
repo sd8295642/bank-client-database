@@ -10,26 +10,52 @@ Throughout the development of the Amityville Bank Client Database, we gained val
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+### Homepage
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+<img src="assets\images\amityvillebankdatabasehome.JPG">
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+### Client Info
+
+<img src="assets\images\amityvillebankdatabaseclient.JPG">
+
+### Client Profile Creation
+
+<img src="assets\images\amityvillebankdatanewacct.JPG">
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
+https://github.com/sd8295642
+- Initial Account and Client models and associated column definitions, updating them as
+needed to reflect all changes. Created initial handlebars files and updated routes as needed to
+display the proper pages in the browser which entailed connection the search form and get
+request.
 
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
+https://github.com/bfbrandhorst
+- Created seed.js and seed data. Handled the signup functions and corresponding
+handlebars. CSS styling and updating all handlebars files as needed for styling purposes.
+Created PowerPoint presentation.
 
-If you followed tutorials, include links to those here as well.
+https://github.com/Babbalicious
+- Completion of the routes for registering a new user and logging in. Implemented
+Speakeasy 2-factor authentication for the registration and login processes. Created and
+implemented bycrypt password hashing and error response handling for incorrect user inputs.
+
+https://github.com/Ash53rd
+- Creation of server, initial routes, created and completed both client and client account post
+functions.
+
+https://github.com/ronhoover97
+- Started the initial setup in the public side of the application, working with the login and
+logout functions and contributed to the auth file and handlebars. Created the ReadMe.
 
 ## Features
 
-If your project has a lot of features, list them here.
+Login into website using 2 factor mobile authenticator. Search by client number. Create new client profiles. Return to home by clicking Header Title. Logout.
 
 ## License
 
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
+MIT License
+
+## Deployed Application
+
+[](https://amityville-bank-employee-application.onrender.com/login)https://amityville-bank-employee-application.onrender.com/login
