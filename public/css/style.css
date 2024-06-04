@@ -3,27 +3,26 @@ header {
 }
 
 .enter-button {
-
   border-radius: 9px;
   border: none;
-  font-family:"MedievalSharp", cursive;
+  font-family: "MedievalSharp", cursive;
   font-size: medium;
 }
 
 .enter-button:hover {
   background-color: black;
-  color:rgb(178, 8, 8);
+  color: rgb(178, 8, 8);
 }
 
 .search-button {
   border-radius: 6px;
   border: none;
-  font-family:"MedievalSharp", cursive;
+  font-family: "MedievalSharp", cursive;
 }
 
 .search-button:hover {
   background-color: black;
-  color:rgb(178, 8, 8);
+  color: rgb(178, 8, 8);
 }
 
 .no-button {
@@ -45,17 +44,22 @@ header {
 #submit-signup {
   border-radius: 6px;
   border: none;
-  font-family:"MedievalSharp", cursive;
+  font-family: "MedievalSharp", cursive;
 }
 
 #submit-signup:hover {
   background-color: black;
-  color:rgb(178, 8, 8);
+  color: rgb(178, 8, 8);
+}
+
+#new-client-container {
+  display: flex;
+  justify-content: center;
 }
 
 .new-client {
   text-decoration: none;
-  color:inherit;
+  color: inherit;
   font-size: large;
 }
 
@@ -75,12 +79,12 @@ header {
   width: 100%;
 }
 
-.header h1 a{
+.header h1 a {
   text-decoration: none;
   color: inherit;
 }
 
-.header-title{
+.header-title {
   font-size: 1.5em;
 }
 
@@ -90,7 +94,7 @@ header {
   padding: 3rem;
   background-color: rgb(139, 12, 12);
   border-radius: 8px;
-  box-shadow: 4px 4px 8px rgba(255,255,255,0.3);
+  box-shadow: 4px 4px 8px rgba(255, 255, 255, 0.3);
   display: flex;
   display: inline;
   justify-content: center;
@@ -111,7 +115,8 @@ header {
   padding: 1rem;
 }
 
-.client-info, .account-info {
+.client-info,
+.account-info {
   max-width: 40rem;
   min-width: 10rem;
   padding: 3rem;
@@ -143,7 +148,7 @@ label {
 }
 
 .submit-login {
-  display:flex;
+  display: flex;
   justify-content: end;
   padding: 1rem;
 }
@@ -157,7 +162,7 @@ label {
   text-decoration: underline;
 }
 
-.signup-button-container{
+.signup-button-container {
   display: flex;
   justify-content: center;
   padding: 10px;
@@ -165,7 +170,7 @@ label {
 
 .signup-button-container a {
   text-decoration: none;
-  color:inherit;
+  color: inherit;
   font-size: larger;
 }
 
@@ -176,32 +181,30 @@ label {
 
 .add-account-btn {
   text-decoration: none;
-  color:inherit;
-  font-size:larger;
+  color: inherit;
+  font-size: larger;
   color: black;
 }
 
 .add-account-btn:hover {
-  color:rgb(224, 218, 218);
+  color: rgb(224, 218, 218);
   text-decoration: underline;
 }
 
-
-#email-login, #token-login {
+#email-login,
+#token-login {
   border-radius: 6px;
   border: none;
-  box-shadow:inset 2px 2px 4px rgba(0,0,0,0.5);
-
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
-
 
 #password-login {
   border-radius: 6px;
-  border:none;
-  box-shadow:inset 2px 2px 4px rgba(0,0,0,0.5);
+  border: none;
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.nav a{
+.nav a {
   text-decoration: none;
-  color:inherit;
+  color: inherit;
 }
