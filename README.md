@@ -25,27 +25,27 @@ Throughout the development of the Amityville Bank Client Database, we gained val
 ## Credits
 
 https://github.com/sd8295642
-Initial Account and Client models and associated column definitions, updating them as
+- Initial Account and Client models and associated column definitions, updating them as
 needed to reflect all changes. Created initial handlebars files and updated routes as needed to
 display the proper pages in the browser which entailed connection the search form and get
 request.
 
 https://github.com/bfbrandhorst
-Created seed.js and seed data. Handled the signup functions and corresponding
+- Created seed.js and seed data. Handled the signup functions and corresponding
 handlebars. CSS styling and updating all handlebars files as needed for styling purposes.
 Created PowerPoint presentation.
 
 https://github.com/Babbalicious
-Completion of the routes for registering a new user and logging in. Implemented
+- Completion of the routes for registering a new user and logging in. Implemented
 Speakeasy 2-factor authentication for the registration and login processes. Created and
 implemented bycrypt password hashing and error response handling for incorrect user inputs.
 
 https://github.com/Ash53rd
-Creation of server, initial routes, created and completed both client and client account post
+- Creation of server, initial routes, created and completed both client and client account post
 functions.
 
 https://github.com/ronhoover97
-Started the initial setup in the public side of the application, working with the login and
+- Started the initial setup in the public side of the application, working with the login and
 logout functions and contributed to the auth file and handlebars. Created the ReadMe.
 
 ## Features
